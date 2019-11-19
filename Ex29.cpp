@@ -21,7 +21,7 @@ int main()
         {
 			
             double res1=4*pow(sin(k*dx/2),2)*i;
-            std::cout<<res1<<std::endl;
+            std::cout<<k<<" "<<res1<<std::endl;
         }
         
     }
