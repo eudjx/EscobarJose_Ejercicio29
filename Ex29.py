@@ -2,9 +2,13 @@ import os
 import numpy as np
 import matplotlib.pyplot as plt
 
-plt.figure(figsize=(15,10))
 data = np.loadtxt("Ex29.dat")
-plt.plot(np.linspace(0, len(data), len(data)), data)
+plt.figure(figsize=(20,5))
+plt.subplot(1,2,1)
+plt.imshow(data/np.max(data[:,0]))
+plt.colorbar()
+plt.subplot(1,2,2)
+plt.plot(data[:,0], data[:,1]/np.max(data[:,1]))
 plt.title("Diffusive equation")
 plt.xlabel("t")
 plt.ylabel("Diffusion")
